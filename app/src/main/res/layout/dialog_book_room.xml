@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Room"
+        android:textColor="#212121"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room: Deluxe Room"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_base_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Base Price: $100/day"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_room_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/check_in_date_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_base_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_check_in_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-in Date (YYYY-MM-DD)"
+            android:inputType="date"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/num_days_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/check_in_date_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_num_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Days"
+            android:inputType="number"
+            android:text="1"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price: $100"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/num_days_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Booking"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_price"
+        app:layout_constraintEnd_toStartOf="@id/btn_confirm"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

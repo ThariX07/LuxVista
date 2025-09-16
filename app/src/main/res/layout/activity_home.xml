@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/profilebg"
+    tools:context=".home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Welcome to Our Hotel"
+            android:textColor="#EFEAEA"
+            android:textSize="28sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Rooms Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rooms_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FFFFFF"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/header_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Rooms Title -->
+                <TextView
+                    android:id="@+id/rooms_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Our Rooms"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Rooms Image -->
+                <ImageView
+                    android:id="@+id/rooms_image"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_room"
+                    app:layout_constraintTop_toBottomOf="@id/rooms_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Room preview" />
+
+                <!-- Rooms Description -->
+                <TextView
+                    android:id="@+id/rooms_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Explore our luxurious rooms designed for comfort and relaxation. Choose from Deluxe Suites, Executive Rooms, and Family Suites, each equipped with modern amenities like high-speed Wi-Fi, plush bedding, and stunning views. Prices start at $99/night."
+                    android:textColor="#757575"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/rooms_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Rooms Action Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rooms_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Rooms"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/rooms_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Services Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/services_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FFFFFF"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/rooms_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Services Title -->
+                <TextView
+                    android:id="@+id/services_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Our Services"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Services Image -->
+                <ImageView
+                    android:id="@+id/services_image"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_service"
+                    app:layout_constraintTop_toBottomOf="@id/services_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Service preview" />
+
+                <!-- Services Description -->
+                <TextView
+                    android:id="@+id/services_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Enjoy world-class services including a 24/7 fitness center, spa treatments, gourmet dining, and concierge assistance. Our complimentary shuttle service ensures easy access to nearby attractions. Book a service today for a personalized experience."
+                    android:textColor="#757575"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/services_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Services Action Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/services_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore Services"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/services_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Profile Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profile_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="View Profile"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/services_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:iconGravity="start"
+            style="@style/Widget.MaterialComponents.Button" />
+
+        <!-- Logout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Logout"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/profile_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:iconGravity="start"
+            style="@style/Widget.MaterialComponents.Button" />
+
+        <!-- Promotions ImageButton -->
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="70dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="1000dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/rooms_card"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/promo"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

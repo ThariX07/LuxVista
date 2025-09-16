@@ -1,0 +1,17 @@
+<resources>
+    <string-array name="room_types">
+        <item>All Room Types</item>
+        <item>Ocean View Suite</item>
+        <item>Deluxe Room</item>
+        <item>Family Suite</item>
+    </string-array>
+
+    <string-array name="availability_options">
+        <item>All</item>
+        <item>Available</item>
+        <item>Unavailable</item>
+    </string-array>
+
+    <string name="room_type_prompt">Select Room Type</string>
+    <string name="availability_prompt">Select Availability</string>
+</resources>
